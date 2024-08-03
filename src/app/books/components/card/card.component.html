@@ -1,0 +1,41 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{book.id | toggleTitle:3 }}</mat-card-title>
+    <mat-card-subtitle>Leído: {{book.readed | evalBoolean}}</mat-card-subtitle>
+  </mat-card-header>
+
+  <img mat-card-image [src]="book | bookImage" alt="{{ book.id | toggleTitle:1 | toggleTitle}}">
+
+  <mat-card-content class="mt-2">
+    <h4> Fecha de publicación: {{book.release}} </h4>
+    <p>
+      <strong>Tipo de lectura: {{book.theme}}</strong>
+      <br>
+      <mat-chip-listbox>
+        <mat-chip color="primary">
+          {{book.owned | evalAva}}
+        </mat-chip >
+      </mat-chip-listbox>
+    </p>
+  </mat-card-content>
+
+  <mat-divider></mat-divider>
+
+  <mat-card-actions>
+
+    <button
+    mat-mini-fab
+    color="primary"
+    [routerLink]="['/books/edit', book.id]">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <span class="spacer"></span>
+    <button
+    mat-mini-fab
+    [routerLink]="['/books/', book.id]">
+      <mat-icon>read_more</mat-icon>
+    </button>
+
+  </mat-card-actions>
+
+</mat-card>

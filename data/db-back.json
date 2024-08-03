@@ -1,0 +1,141 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "usuario": "John Doe",
+      "email": "john.due@gmail.com"
+    }
+  ],
+  "books": [
+    {
+      "id"        : "El extranjero",
+      "theme"     : "Filosofía",
+      "author"    : "Albert Camus",
+      "release"   : "1982",
+      "owned"     : true,
+      "readed"    : true
+    },
+    {
+      "id"        : "El infierno",
+      "theme"     : "Filosofía",
+      "author"    : "Henri Barbusse",
+      "release"   : "1954",
+      "owned"     : true,
+      "readed"    : true
+    },
+    {
+      "id"        : "El Kybalion",
+      "theme"     : "Filosofía",
+      "author"    : "Los tres iniciados",
+      "release"   : "500 A.C",
+      "owned"     : true,
+      "readed"    : false
+    },
+    {
+      "id"        : "La metamorfosis",
+      "theme"     : "Filosofía",
+      "author"    : "Franz Kafka",
+      "release"   : "1862",
+      "owned"     : true,
+      "readed"    : true
+    },
+    {
+      "id"        : "Demian",
+      "theme"     : "Filosofía",
+      "author"    : "Herman Hesse",
+      "release"   : "1825",
+      "owned"     : true,
+      "readed"    : true
+    },
+    {
+      "id"        : "El Túnel",
+      "theme"     : "Filosofía",
+      "author"    : "Ernesto Sabato",
+      "release"   : "2012",
+      "owned"     : true,
+      "readed"    : true
+    },
+    {
+      "id"        : "Siddharta",
+      "theme"     : "Filosofía",
+      "author"    : "Herman Hesse",
+      "release"   : "1932",
+      "owned"     : true,
+      "readed"    : false
+    },
+    {
+      "id"        : "El primer hombre",
+      "theme"     : "Filosofía",
+      "author"    : "Albert Camus",
+      "release"   : "1941",
+      "owned"     : true,
+      "readed"    : true
+    },
+    {
+      "id"        : "Bodas, el verano",
+      "theme"     : "Filosofía",
+      "author"    : "Albert Camus",
+      "release"   : "1912",
+      "owned"     : true,
+      "readed"    : true
+    },
+    {
+      "id"        : "Más allá del bien y del mal",
+      "theme"     : "Filosofía",
+      "author"    : "Friederich Nietzche",
+      "release"   : "1782",
+      "owned"     : true,
+      "readed"    : false
+    },
+    {
+      "id"        : "En la colonia penitenciaria",
+      "theme"     : "Filosofía",
+      "author"    : "Franz Kafka",
+      "release"   : "1882",
+      "owned"     : true,
+      "readed"    : false
+    },
+    {
+      "id"        : "Cuentos de amor, de Locura y de Muerte",
+      "theme"     : "Fantasía",
+      "author"    : "Horacio Quiroga",
+      "release"   : "1982",
+      "owned"     : true,
+      "readed"    : true
+    },
+    {
+      "id"        : "Un mundo feliz",
+      "theme"     : "Distopía",
+      "author"    : "Aldous Huxley",
+      "release"   : "1957",
+      "owned"     : true,
+      "readed"    : true
+    },
+    {
+      "id"        : "Cartas a un amigo aleman",
+      "theme"     : "Filosofía",
+      "author"    : "Albert Camus",
+      "release"   : "1982",
+      "owned"     : true,
+      "readed"    : true
+    },
+    {
+      "id"        : "Así hablaba zaratustra",
+      "theme"     : "Filosofía",
+      "author"    : "Friederich Nietzche",
+      "release"   : "1891",
+      "owned"     : true,
+      "readed"    : false
+    },
+    {
+      "id"        : "El lobo estepario",
+      "theme"     : "Filosofía",
+      "author"    : "Herman Hesse",
+      "release"   : "1982",
+      "owned"     : false,
+      "readed"    : false
+    }
+
+
+  ]
+}
