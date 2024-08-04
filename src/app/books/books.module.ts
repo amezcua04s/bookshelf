@@ -11,6 +11,8 @@ import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { PipesModule } from './pipes/pipes.modules';
 import { CardComponent } from './components/card/card.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+
 
 
 @NgModule({
@@ -28,6 +30,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MaterialModule,
     PipesModule,
     ReactiveFormsModule,
+    MatCheckboxModule
   ]
 })
 export class BooksModule { }
