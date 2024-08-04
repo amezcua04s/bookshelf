@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BooksService } from '../../services/books.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { delay, switchMap } from 'rxjs';
+import { switchMap } from 'rxjs';
 import { BookInterface } from '../../interfaces/book-interface';
 
 @Component({
@@ -22,7 +22,6 @@ export class BookPageComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params
       .pipe(
-        delay(2000),
         switchMap( ({ id }) => this.bookService.getBookById( id ))
       ).subscribe( book => {
 
@@ -33,6 +32,10 @@ export class BookPageComponent implements OnInit {
 
         return;
       })
+  }
+
+  goBack() : void {
+    this.router.navigateByUrl('books/list')
   }
 
 }

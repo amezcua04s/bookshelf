@@ -1,1 +1,27 @@
-<p>search-page works!</p>
+<div class="flex flex-column p-2">
+
+<h3>Buscador por título </h3>
+<mat-form-field>
+  <mat-label>Buscar libro</mat-label>
+  <input
+    type="text"
+    matInput
+    [formControl]="searchInput"
+    (input)="searchBook()"
+    [matAutocomplete]="auto"
+    />
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete"
+    (optionSelected)="onSelectedOption( $event )"
+    >
+      <mat-option *ngFor="let book of books" [value]="book">
+        {{ book.id |toggleTitle:3 }}
+      </mat-option>
+      <mat-option
+        *ngIf="books.length===0 && searchInput.value && searchInput.value.length > 0"
+        value="" >
+        No hay ningún resultado relacionado con {{searchInput.value}}
+      </mat-option>
+    </mat-autocomplete>
+</mat-form-field>
+
+</div>

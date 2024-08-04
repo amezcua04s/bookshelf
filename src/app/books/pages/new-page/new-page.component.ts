@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class NewPageComponent {
 
+  public themes = [
+    {id : 'Filosofía'},
+    {id : 'Distopía'}
+  ]
+
 }

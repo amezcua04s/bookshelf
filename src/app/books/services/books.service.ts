@@ -24,4 +24,8 @@ export class BooksService {
     )
   }
 
+  getSuggestions( query : string) : Observable<BookInterface[]> {
+    return this.http.get<BookInterface[]>(`${this.baseUrl}/books?q=${ query }`)
+  }
+
 }
