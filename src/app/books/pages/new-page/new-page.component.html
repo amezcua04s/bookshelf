@@ -1,7 +1,15 @@
-<h1>
-  Agregar
-  Libro
+<h1 *ngIf="!newBook.id">
+  Agregar Libro
 </h1>
+<div *ngIf="newBook.id">
+  <h1>
+    Modificar Libro
+  </h1>
+  <sub>
+    {{ newBook.title | uppercase }}
+  </sub>
+
+</div>
 
 <mat-divider class="mb-2"> </mat-divider>
 
@@ -11,12 +19,14 @@
     <mat-card>
       <mat-card-content>
 
-        <div class="grid">
+        <form class="grid" [formGroup]="bookForm" (ngSubmit)="onSumbit()">
+
           <mat-form-field class="col-12 sm:col-6">
             <mat-label>Título</mat-label>
             <input matInput
               type="text"
               required
+              formControlName="title"
             />
           </mat-form-field>
 
@@ -25,52 +35,68 @@
             <input matInput
               type="text"
               required
+              formControlName="author"
             />
           </mat-form-field>
 
-          <mat-form-field class="col-12">
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Fecha de publicación</mat-label>
+            <input matInput
+              type="text"
+              required
+              formControlName="release"
+            />
+          </mat-form-field>
+
+          <mat-form-field class="col-12 sm:col-6">
             <mat-label>Género</mat-label>
-            <mat-select required>
+            <mat-select
+             formControlName="theme"
+             required
+              >
               <mat-option *ngFor="let theme of themes"
-              [value]="theme.id">
-              {{ theme.id }}
+              [value]="theme">
+              {{ theme }}
               </mat-option>
             </mat-select>
           </mat-form-field>
 
-          <div class="flex justify-content-between">
-          <mat-form-field class="col-6">
-            <mat-label>Leído</mat-label>
-            <mat-select required>
-              <mat-option *ngFor="let resp of biRes"
-              [value]="resp.id">
-              {{ resp.id }}
-              </mat-option>
-            </mat-select>
+          <mat-form-field class="col-12">
+            <mat-label>Imagen</mat-label>
+            <input matInput
+              type="text"
+              required
+              formControlName="img"
+            />
           </mat-form-field>
-          <span class="spacer"></span>
-          <mat-form-field class="col-6">
-            <mat-label>Lo tienes</mat-label>
-            <mat-select required>
-              <mat-option *ngFor="let resp of biRes"
-              [value]="resp.id">
-              {{ resp.id }}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-          </div>
 
-        </div>
+          <mat-checkbox class="col-12 sm:col-6"
+            formControlName="readed">
+            <mat-label (click)="this.toggleBool(this.readed)">Leído</mat-label>
+          </mat-checkbox>
+
+          <mat-checkbox class="col-12 sm:col-6"
+            formControlName="owned">
+            <mat-label (click)="this.toggleBool(this.owned)">¿Lo tienes?</mat-label>
+          </mat-checkbox>
+
+        </form>
+
         <div class="flex justify-content-between">
           <button
+          *ngIf="newBook.id"
             mat-flat-button
             color="primary"
+            (click)="onDeleteBook()"
             >
             Borrar
+            <mat-icon>delete</mat-icon>
           </button>
 
           <button
             mat-flat-button
+            color="primary"
+            (click)="onSumbit()"
             > Guardar
             <mat-icon>save</mat-icon>
           </button>
@@ -84,10 +110,9 @@
   <div class="col-12 sm:col-6">
 
     <mat-card>
-      <img src="imagen" alt="Imagen " mat-card-image/>
+      <img [src]="newBook | bookImage" [alt]="newBook.title" mat-card-image/>
     </mat-card>
 
   </div>
 
 </div>
-

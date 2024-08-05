@@ -1,15 +1,18 @@
 export interface BookInterface {
   id:         string;
+  title:      string;
   theme:      Theme;
   author:     string;
   release:    string;
   owned:      boolean;
   readed:     boolean;
-  alt_img?:   string;
+  img?:   string;
 }
 
 export enum Theme {
-  Distopía  = "Distopía",
-  Fantasía  = "Fantasía",
-  Filosofía = "Filosofía",
+  Distopia  = "Distopía",
+  Fantasia  = "Fantasía",
+  Filosofia = "Filosofía",
+
+  notSpecified = 'Otro',
 }

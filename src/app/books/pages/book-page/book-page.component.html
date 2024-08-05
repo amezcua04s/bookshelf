@@ -14,12 +14,12 @@
 <div *ngIf="book; else divLoading" class="grid mb-2 p-2">
   <mat-card class="col-12 sm:col-6 md:col-4 xl:col-3 p-3 mt-0">
     <mat-card-header class="mt-0">
-      <mat-card-title class="p-1">{{book.id | toggleTitle:3}}</mat-card-title>
+      <mat-card-title class="p-1">{{book.title}}</mat-card-title>
       <div>
         <mat-card-subtitle class="p-2">{{book.theme}}</mat-card-subtitle>
       </div>
     </mat-card-header>
-    <img [src]="book | bookImage" [alt]="book.id | toggleTitle:3" mat-card-image/>
+    <img [src]="book | bookImage" [alt]="book.id" mat-card-image/>
   </mat-card>
 
   <mat-card>
@@ -29,7 +29,7 @@
     <mat-card-content>
       <mat-list>
         <mat-list-item> {{book.author}}</mat-list-item>
-        <mat-list-item> {{book.id | toggleTitle:3}}</mat-list-item>
+        <mat-list-item> {{book.title}}</mat-list-item>
         <mat-list-item> Estatus: {{book.owned | evalAva}}</mat-list-item>
         <mat-list-item> ¿Leído?  {{book.readed | evalBoolean}}</mat-list-item>
       </mat-list>

@@ -8,6 +8,14 @@
   ],
   "books": [
     {
+      "id": "el-extranjero",
+      "theme"     : "Filosofía",
+      "author"    : "Albert Camus",
+      "release"   : "1982",
+      "owned"     : true,
+      "readed"    : true
+    },
+    {
       "id": "el-infierno",
       "theme": "Filosofía",
       "author": "Henri Barbusse",
@@ -126,6 +134,16 @@
       "release": "1982",
       "owned": false,
       "readed": false
+    },
+    {
+      "id": "",
+      "title": "El existencialismo es un humanismo",
+      "theme": "Otro",
+      "author": "Sartre",
+      "release": "1943",
+      "owned": false,
+      "readed": null,
+      "img": "https://edicionesquintosol.com/wp-content/uploads/2022/03/El-existencialismo-es-un-humanismo-Autor-Jean-Paul-Sartre.jpg"
     }
   ]
 }

@@ -14,7 +14,7 @@
     (optionSelected)="onSelectedOption( $event )"
     >
       <mat-option *ngFor="let book of books" [value]="book">
-        {{ book.id |toggleTitle:3 }}
+        {{ book.title}}
       </mat-option>
       <mat-option
         *ngIf="books.length===0 && searchInput.value && searchInput.value.length > 0"

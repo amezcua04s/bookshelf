@@ -12,6 +12,7 @@ import { PipesModule } from './pipes/pipes.modules';
 import { CardComponent } from './components/card/card.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 
 
 
@@ -23,14 +24,15 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     ListPageComponent,
     NewPageComponent,
     SearchPageComponent,
+    ConfirmDialogComponent,
   ],
   imports: [
-    CommonModule,
     BooksRoutingModule,
+    CommonModule,
+    MatCheckboxModule,
     MaterialModule,
     PipesModule,
     ReactiveFormsModule,
-    MatCheckboxModule
   ]
 })
 export class BooksModule { }

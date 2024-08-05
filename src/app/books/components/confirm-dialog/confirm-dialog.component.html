@@ -1,0 +1,11 @@
+<h2 mat-dialog-title>¿Desea continuar?</h2>
+<mat-dialog-content>
+  <p>Proceso irreversible, eliminarás definitivamente a </p>
+  <p>{{ data.title | uppercase}}</p>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <span class="spacer"></span>
+  <button mat-flat-button (click)="onConfirm()" color="primary" >Ok</button>
+</mat-dialog-actions>

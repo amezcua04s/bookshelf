@@ -40,8 +40,8 @@ export class BooksService {
   deleteBookByName( id : string) : Observable<boolean>{
     return this.http.delete(`${this.baseUrl}/books/${id}`)
       .pipe(
+        map( resp => true ),
         catchError( err => of(false)),
-        map( resp => true )
       );
   }
 

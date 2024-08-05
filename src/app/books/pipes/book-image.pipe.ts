@@ -7,10 +7,10 @@ import { BookInterface } from '../interfaces/book-interface';
 export class BookImagePipe implements PipeTransform {
 
   transform(book : BookInterface): string {
-    if( !book.id && !book.alt_img){
+    if( !book.id && !book.img){
       return 'assets/no-image.png'
     }
-    if ( book.alt_img) return book.alt_img;
+    if ( book.img) return book.img;
 
     return `assets/books/${ book.id }.jpeg`
   }
